@@ -1,32 +1,34 @@
-import type { Metadata } from "next";
-import { Roboto_Condensed } from "next/font/google";
-import "./globals.css";
-import { Header } from "@/shared/ui/Header";
+import type { Metadata } from 'next'
+import { Roboto_Condensed } from 'next/font/google'
 
-const fonts = Roboto_Condensed({ subsets: ["latin"] });
+import { Header } from '@/shared/ui/Header'
+
+import './globals.css'
+
+const fonts = Roboto_Condensed({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "MYG",
-  description: "Your game platform",
-};
+	title: 'MYG',
+	description: 'Your game platform',
+}
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode
 }>) {
-  const links = [
-    { title: "Profile", pathName: "/profile" },
-    { title: "Search", pathName: "/search" },
-  ];
+	const links = [
+		{ title: 'Profile', pathName: '/profile' },
+		{ title: 'Search', pathName: '/search' },
+	]
 
-  return (
-    <html lang="en">
-      <body className={fonts.className}>
-        <Header links={links}/>
+	return (
+		<html lang="en">
+			<body className={fonts.className}>
+				<Header logoTitle="MYG" links={links} />
 
-        {children}
-        </body>
-    </html>
-  );
+				{children}
+			</body>
+		</html>
+	)
 }
