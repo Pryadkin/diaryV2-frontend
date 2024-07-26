@@ -1,4 +1,5 @@
 {
+	"workbench.colorTheme": "Noctis Minimus",
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	// "prettier.configPath": "prettier.js",
 	"prettier.requireConfig": true,

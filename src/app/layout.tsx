@@ -1,15 +1,27 @@
 import type { Metadata } from 'next'
 import { Roboto_Condensed } from 'next/font/google'
+import { Toaster } from 'react-hot-toast'
 
+import { SITE_NAME } from '@/shared/constants/seo.constants'
 import { Header } from '@/shared/ui/Header'
 
-import './globals.css'
+import './globals.scss'
+import { Providers } from './providers'
 
-const fonts = Roboto_Condensed({ subsets: ['latin'] })
+const fonts = Roboto_Condensed({
+	subsets: ['latin'],
+	weight: ['300', '400', '500', '600', '700'],
+	display: 'swap',
+	variable: '--font-roboto',
+	style: ['normal'],
+})
 
 export const metadata: Metadata = {
-	title: 'MYG',
-	description: 'Your game platform',
+	title: {
+		default: 'MYG',
+		template: `%s | ${SITE_NAME}`,
+	},
+	description: 'Best game platform [htmlmygame.com]',
 }
 
 export default function RootLayout({
@@ -25,9 +37,13 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={fonts.className}>
-				<Header logoTitle="MYG" links={links} />
+				<Providers>
+					<Header logoTitle="MYG" links={links} />
 
-				{children}
+					{children}
+
+					<Toaster />
+				</Providers>
 			</body>
 		</html>
 	)
