@@ -18,10 +18,10 @@ const fonts = Roboto_Condensed({
 
 export const metadata: Metadata = {
 	title: {
-		default: 'MYG',
+		default: 'Diary',
 		template: `%s | ${SITE_NAME}`,
 	},
-	description: 'Best game platform [htmlmygame.com]',
+	description: 'Best game platform [htmldiary.com]',
 }
 
 export default function RootLayout({
@@ -38,7 +38,7 @@ export default function RootLayout({
 		<html lang="en">
 			<body className={fonts.className}>
 				<Providers>
-					<Header logoTitle="MYG" links={links} />
+					<Header logoTitle="Diary" links={links} />
 
 					{children}
 
