@@ -1,22 +1,17 @@
 export interface IAuthForm {
 	email: string
-	firstName: string
-	lastName: string
+	name: string
 	password: string
-	games: []
 }
 
 export interface IUser {
-	firstName?: string
-	lastName?: string
-	email?: string
-	password?: string
-}
-
-export interface IUserGame {
+	id: string
 	name: string
-	description: string
-	genres: any[]
+	email?: string
+
+	workInterval?: number
+	breakInterval?: number
+	intervalsCount?: number
 }
 
 export interface IAuthResponse {
