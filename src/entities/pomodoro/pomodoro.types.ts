@@ -1,4 +1,4 @@
-import { IBase } from './root.types'
+import { IBase } from '../../shared/types/root.types'
 
 export interface IPomodoroRoundResponse extends IBase {
 	totalSecontds: number
@@ -10,10 +10,10 @@ export interface IPomodoroSessionResponse extends IBase {
 	isCompleted?: boolean
 }
 
-export type TypePomodoroSessionState = Partial<
+export type TypePomodoroSessionFromState = Partial<
 	Omit<IPomodoroSessionResponse, 'id' | 'createAt' | 'updatedAt'>
 >
 
-export type TypePomodoroRoundState = Partial<
+export type TypePomodoroRoundFromState = Partial<
 	Omit<IPomodoroRoundResponse, 'id' | 'createAt' | 'updatedAt'>
 >

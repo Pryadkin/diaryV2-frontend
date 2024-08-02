@@ -1,4 +1,4 @@
-import { IBase } from './root.types'
+import { IBase } from '@/shared/types/root.types'
 
 export enum EnumTaskPriority {
 	low = 'low',

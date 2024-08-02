@@ -1,4 +1,4 @@
-import { IBase } from './root.types'
+import { IBase } from '@/shared/types/root.types'
 
 export interface ITimeBlockResponse extends IBase {
 	name: string
@@ -7,6 +7,6 @@ export interface ITimeBlockResponse extends IBase {
 	order: number
 }
 
-export type TypeTaskFormState = Partial<
+export type TypeTimeBlockFormState = Partial<
 	Omit<ITimeBlockResponse, 'createdAt' | 'updatedAt'>
 >
