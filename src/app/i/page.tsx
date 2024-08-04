@@ -2,12 +2,11 @@ import type { Metadata } from 'next'
 
 import { NO_INDEX_PAGE } from '@/shared/constants/seo.constants'
 
-import { Auth } from './Auth'
-
 export const metadata: Metadata = {
-	title: 'Auth',
+	title: 'dashboard',
 	...NO_INDEX_PAGE,
 }
-export default function AuthPage() {
-	return <Auth />
+
+export default function dashboardPage() {
+	return <div style={{ color: 'white' }}>dashboard</div>
 }

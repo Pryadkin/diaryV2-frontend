@@ -1,8 +1,9 @@
+import cn from 'clsx'
 import { KeyboardEventHandler, forwardRef } from 'react'
 
 import styles from './Fields.module.scss'
 
-interface InputFieldProps {
+interface Props {
 	id: string
 	label: string
 	extra?: string
@@ -14,7 +15,8 @@ interface InputFieldProps {
 	isNumber?: boolean
 }
 
-export const Field = forwardRef<HTMLInputElement, InputFieldProps>(
+// :TODO fix Field styles
+export const Field = forwardRef<HTMLInputElement, Props>(
 	(
 		{ label, id, extra, type, placeholder, state, disabled, isNumber, ...rest },
 		ref,
@@ -33,18 +35,19 @@ export const Field = forwardRef<HTMLInputElement, InputFieldProps>(
 			}
 		}
 		return (
-			<div className={extra}>
+			<div className={cn(styles.formItem, extra)}>
 				<label htmlFor={id} className={styles.label}>
 					{label}
 				</label>
 				<input
 					ref={ref}
+					className={styles.input}
 					disabled={disabled}
 					type={type}
 					id={id}
 					placeholder={placeholder}
-					className={styles.input}
 					onKeyDown={handleKeyDown}
+					{...rest}
 				/>
 			</div>
 		)

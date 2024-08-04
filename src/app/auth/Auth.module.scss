@@ -1,0 +1,26 @@
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-position-y: -360px;
+	background-position-x: -500px;
+}
+
+.form {
+	width: 350px;
+	border: 1px solid var(--gray-color);
+	border-radius: 3px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--dark-color-2);
+	color: white;
+	padding: 20px;
+}
+
+.btns {
+	button {
+		margin: 0 10px;
+	}
+}

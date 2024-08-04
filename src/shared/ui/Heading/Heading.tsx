@@ -6,7 +6,7 @@ interface IHeading {
 
 export const Heading = ({ title }: IHeading) => {
 	return (
-		<div>
+		<div className={styles.wrapper}>
 			<h1 className={styles.title}>{title}</h1>
 			<div className={styles.line} />
 		</div>

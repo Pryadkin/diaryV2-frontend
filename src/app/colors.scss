@@ -1,0 +1,25 @@
+:root {
+	--dark-color: #000;
+	--dark-color-2: #101010;
+	--dark-light-color: #2e2e2e;
+	--light-color: #fff;
+	--gray-color: #2f2f2f;
+	--highlight-color: #4e4587;
+	--highlight-hover-color: #5946d4;
+	--highlight-active-color: #6f59ff;
+}
+
+// :TODO add dark-mode
+// dark-mode
+
+// body[dark-mode='true'] {
+// 	background-color: var(--dark-color);
+// }
+
+// button[dark-mode='true'] {
+// 	background-color: var(--dark-color);
+// }
+
+[dark-mode='false'] {
+	background-color: var(--light-color);
+}

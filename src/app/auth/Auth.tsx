@@ -9,6 +9,11 @@ import toast from 'react-hot-toast'
 import { authService } from '@/shared/api/auth/auth.service'
 import { IAuthForm } from '@/shared/api/auth/auth.types'
 import { DASHBOARD_PAGES } from '@/shared/configs/pages-url.config'
+import { Button } from '@/shared/ui/Button'
+import { Field } from '@/shared/ui/Fields/Fields'
+import { Heading } from '@/shared/ui/Heading'
+
+import styles from './Auth.module.scss'
 
 export function Auth() {
 	const { register, handleSubmit, reset } = useForm<IAuthForm>({
@@ -35,9 +40,32 @@ export function Auth() {
 	}
 
 	return (
-		<div>
-			<form onSubmit={handleSubmit(onSubmit)}>
-				<div></div>
+		<div className={styles.wrapper}>
+			<form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+				<Heading title="Auth" />
+
+				<Field
+					id="email"
+					label="Email"
+					placeholder="Enter email"
+					type="email"
+					extra=""
+					{...register('email')}
+				/>
+
+				<Field
+					id="password"
+					label="Password"
+					placeholder="Enter password"
+					type="password"
+					extra=""
+					{...register('password')}
+				/>
+
+				<div className={styles.btns}>
+					<Button onClick={() => setIsLoginForm(true)}>Login</Button>
+					<Button onClick={() => setIsLoginForm(false)}>Register</Button>
+				</div>
 			</form>
 		</div>
 	)

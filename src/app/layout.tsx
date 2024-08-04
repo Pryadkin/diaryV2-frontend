@@ -1,19 +1,18 @@
 import type { Metadata } from 'next'
-import { Roboto_Condensed } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 import { Toaster } from 'react-hot-toast'
 
 import { SITE_NAME } from '@/shared/constants/seo.constants'
-import { Header } from '@/shared/ui/Header'
 
 import './globals.scss'
 import { Providers } from './providers'
 
-const fonts = Roboto_Condensed({
+const fonts = Roboto({
 	subsets: ['latin'],
-	weight: ['300', '400', '500', '600', '700'],
+	weight: ['300', '400', '500'],
 	display: 'swap',
 	variable: '--font-roboto',
-	style: ['normal'],
+	style: ['normal', 'italic'],
 })
 
 export const metadata: Metadata = {
@@ -38,8 +37,6 @@ export default function RootLayout({
 		<html lang="en">
 			<body className={fonts.className}>
 				<Providers>
-					<Header logoTitle="Diary" links={links} />
-
 					{children}
 
 					<Toaster />
