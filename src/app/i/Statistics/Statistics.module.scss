@@ -1,0 +1,25 @@
+.wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 20px;
+	margin-top: 20px;
+}
+
+.title {
+	font-weight: 300;
+}
+
+.statItem {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 30px;
+
+	background-color: var(--dark-color-3);
+	border-radius: 5px;
+}
+
+.num {
+	font-size: 24px;
+	padding-top: 10px;
+}

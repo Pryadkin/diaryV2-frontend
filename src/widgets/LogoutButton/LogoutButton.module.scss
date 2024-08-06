@@ -1,0 +1,22 @@
+.wrapper {
+	position: absolute;
+	top: 65px;
+	right: 5px;
+}
+
+.button {
+	display: flex;
+	border: none;
+	opacity: 0.3;
+	cursor: pointer;
+
+	&:hover {
+		opacity: 1;
+		transition: opacity 300;
+	}
+}
+
+.icon {
+	color: var(--light-color);
+	background-color: var(--dark-color-2);
+}

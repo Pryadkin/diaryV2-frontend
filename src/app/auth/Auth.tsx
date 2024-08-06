@@ -9,7 +9,7 @@ import toast from 'react-hot-toast'
 import { authService } from '@/shared/api/auth/auth.service'
 import { IAuthForm } from '@/shared/api/auth/auth.types'
 import { DASHBOARD_PAGES } from '@/shared/configs/pages-url.config'
-import { Button } from '@/shared/ui/Button'
+import { Button } from '@/shared/ui'
 import { Field } from '@/shared/ui/Fields/Fields'
 import { Heading } from '@/shared/ui/Heading'
 

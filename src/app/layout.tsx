@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Roboto } from 'next/font/google'
+import { Open_Sans, Roboto } from 'next/font/google'
 import { Toaster } from 'react-hot-toast'
 
 import { SITE_NAME } from '@/shared/constants/seo.constants'
@@ -7,7 +7,7 @@ import { SITE_NAME } from '@/shared/constants/seo.constants'
 import './globals.scss'
 import { Providers } from './providers'
 
-const fonts = Roboto({
+const fonts = Open_Sans({
 	subsets: ['latin'],
 	weight: ['300', '400', '500'],
 	display: 'swap',

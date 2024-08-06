@@ -16,13 +16,13 @@ export const middleware = async (
 
 	console.log('isAuthPage', isAuthPage)
 
-	if (isAuthPage && refreshToken) {
-		return NextResponse.redirect(new URL(DASHBOARD_PAGES.HOME, url))
-	}
+	// if (isAuthPage && refreshToken) {
+	// 	return NextResponse.redirect(new URL(DASHBOARD_PAGES.HOME, url))
+	// }
 
-	if (isAuthPage) {
-		return NextResponse.next()
-	}
+	// if (isAuthPage) {
+	// 	return NextResponse.next()
+	// }
 
 	// :TODO add isDashboardPage to middleware
 	// * isDashboardPage
@@ -31,12 +31,12 @@ export const middleware = async (
 	// }
 
 	// if (isDashboardPage && !refreshToken) {
-	// 	return
+	// 	return NextResponse.redirect(new URL(DASHBOARD_PAGES.NOTFOUND, url))
 	// }
 
-	if (!refreshToken) {
-		return NextResponse.redirect(new URL('/auth', url))
-	}
+	// if (!refreshToken) {
+	// 	return NextResponse.redirect(new URL('/auth', url))
+	// }
 
 	return NextResponse.next()
 }

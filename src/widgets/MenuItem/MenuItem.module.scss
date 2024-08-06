@@ -1,0 +1,23 @@
+.link {
+	display: flex;
+	gap: 2.5px;
+	justify-content: flex-start;
+	align-items: center;
+	width: calc(100% - 20px);
+	margin: 5px 10px;
+	border-radius: 5px;
+	padding: 5px 10px;
+	transition: 0.3s;
+
+	svg {
+		width: 20px;
+	}
+
+	span {
+		padding-left: 8px;
+	}
+
+	&:hover {
+		background-color: var(--gray-color);
+	}
+}
