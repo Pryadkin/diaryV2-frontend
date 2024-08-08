@@ -28,18 +28,21 @@ export default function RootLayout({
 }: Readonly<{
 	children: React.ReactNode
 }>) {
-	const links = [
-		{ title: 'Profile', pathName: '/profile' },
-		{ title: 'Search', pathName: '/search' },
-	]
-
 	return (
 		<html lang="en">
 			<body className={fonts.className}>
 				<Providers>
 					{children}
 
-					<Toaster />
+					<Toaster
+						toastOptions={{
+							style: {
+								background: 'black',
+								color: 'gray',
+								border: '1px solid gray',
+							},
+						}}
+					/>
 				</Providers>
 			</body>
 		</html>

@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { NO_INDEX_PAGE } from '@/shared/constants/seo.constants'
 import { Heading } from '@/shared/ui/Heading'
 
-import { Statistics } from './Statistics/Statistics'
+import { Statistics } from './Statistics'
 
 export const metadata: Metadata = {
 	title: 'dashboard',

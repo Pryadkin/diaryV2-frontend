@@ -1,0 +1,13 @@
+.form {
+	display: grid;
+	grid-template-columns: 300px 300px;
+	gap: 20px;
+}
+
+.leftWrapper {
+	grid-area: 1 / 1;
+}
+
+.rightWrapper {
+	grid-area: 1 / 2;
+}
